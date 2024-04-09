@@ -1,15 +1,9 @@
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-
+import '../assets/styles/style-footer.css';
 const Footer = () => {
     return (
-        <div>
-            <Navbar className="bg-body-tertiary">
-                <Container className='justify-content-center'>
-                    <Navbar.Brand href="#home">Copyright Mexican Food 2024</Navbar.Brand>
-                </Container>
-            </Navbar>
-        </div>
+        <footer>
+            <small>Copyright Mexican Food 2024</small>
+        </footer>
     );
 };
 

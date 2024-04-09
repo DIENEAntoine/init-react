@@ -3,8 +3,8 @@ import '../assets/styles/Styledish.css';
 
 const Dish = ({ name, price, image }) => {
     return (
-        <div>
-            <Card style={{ width: '18rem' }}>
+        <div id='Card'>
+            <Card>
                 <Card.Img src={image} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
