@@ -2,3 +2,7 @@ Img {
     height: 50px;
     width: 50px;
 }
+
+.nav-link.active {
+    text-decoration: underline;
+}
