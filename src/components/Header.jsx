@@ -7,7 +7,7 @@ import logo from '../assets/images/logo.webp';
 
 const Header = () => {
     return (
-        <div className='header'>
+        <header>
             <Navbar className='bg-body-tertiary'>
                 <Container>
                     <Navbar.Brand href="/">
@@ -24,7 +24,7 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-        </div>
+        </header>
     );
 };
 
