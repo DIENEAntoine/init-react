@@ -8,24 +8,27 @@ import logo from '../assets/images/logo.webp';
 const Header = () => {
     return (
         <div className='header'>
-        
             <Navbar className='bg-body-tertiary'>
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand href="/">
                         <img
-                        alt=""
+                        alt="Logo"
                         src={logo}
                         className="d-inline-block align-top"
                         />
                     </Navbar.Brand>
-                    <Nav.Link href="#home" className='d-flex flex-end'>Accueil</Nav.Link>
+                    <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+                        <Nav>
+                            <Nav.Link href="/">Accueil</Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
                 </Container>
             </Navbar>
         </div>
     );
 };
 
+
+
 export default Header;
-
-
 
