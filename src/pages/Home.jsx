@@ -3,7 +3,7 @@ import Dish from '../components/Dish';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import { Link } from 'react-router-dom';
+
 
 
 const Home = () => {
@@ -36,13 +36,13 @@ const Home = () => {
                 <Row className="justify-content-center">
                     {dishes.map((dish, index) => (
                         <Col key={index}>
-                            <Link to="/tacos">
+                            
                                 <Dish 
                                     name={dish.name}
                                     image={dish.image}
                                     price={dish.price}
                                 />
-                            </Link>
+                            
                         </Col>
                     ))}   
                 </Row>
