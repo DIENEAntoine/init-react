@@ -11,8 +11,8 @@ function App() {
       <Routes>
         <Route element={<Layout/>}>
           <Route index element={<Home/>} />
-          <Route path="/plat/:slug" element={<DishDetails/>}/>
-          <Route path="/about" element={<About/>}/>
+          <Route path="/a-propos" element={<About />}/>
+          <Route path="/plat/:slug" element={<DishDetails />}/>
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
