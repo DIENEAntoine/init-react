@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import '../assets/styles/Styledish.css';
 
-const Dish = ({ name, price, image }) => {
+const Dish = ({ name, price, image, slug }) => {
     return (
         <Card id='Card'>
             <Card.Img src={image} />
