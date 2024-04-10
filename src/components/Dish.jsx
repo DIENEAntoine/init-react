@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Dish = ({ name, price, image, slug }) => {
     return (
-        <Link to="/tacos">
+        <Link to={`/tacos/${slug}`}>
             <Card id='Card'>
                 <Card.Img src={image} />
                 <Card.Body>
