@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import DishDetails from "./pages/DishDetails.jsx";
+import NotFound from "./pages/NotFound.jsx";
 import Layout from "./components/Layout.jsx";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         <Route element={<Layout/>}>
           <Route index element={<Home/>} />
           <Route path="/plat/:slug" element={<DishDetails/>}/>
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </>
