@@ -3,6 +3,9 @@ import Dish from '../components/Dish';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+import { useState } from 'react';
+import "../assets/styles/home.css";
 
 
 
@@ -33,20 +36,31 @@ const Home = () => {
         
     ];
 
+    const [showNewOnly, setShowNewOnly] = useState(false);
+
+    const handleShowNewOnly = () => {
+        setShowNewOnly(!showNewOnly);
+    };
+
+    const filteredDishes = showNewOnly ? dishes.filter(dish => dish.isNew) : dishes;
+    
     return (
         <div className="home-page mt-5">
             <Container>
-                <Row className="justify-content-center">
-                    {dishes.map((dish, index, ) => (
-                        <Col key={index}>
-                                <Dish 
-                                    name={dish.name}
-                                    image={dish.image}
-                                    price={dish.price}
-                                    isNew={dish.isNew}
-                                />
+                <Button id='Show-btn' onClick={handleShowNewOnly}>
+                    {showNewOnly ? "Voir tous les plats" : "Nouveautés uniquement"}
+                </Button>
+                <Row className="justify-content-start">
+                    {filteredDishes.map(dish => (
+                        <Col key={dish.slug} className='col-4'>
+                            <Dish
+                                name={dish.name}
+                                image={dish.image}
+                                price={dish.price}
+                                isNew={dish.isNew}
+                            />
                         </Col>
-                    ))}   
+                    ))}
                 </Row>
             </Container>
         </div>
