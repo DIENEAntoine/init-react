@@ -6,7 +6,7 @@ import Badge from 'react-bootstrap/Badge';
 
 const Dish = ({ name, price, image, slug, isNew }) => {
     return (
-        <Link to={`/tacos/${slug}`}>
+        <Link to={`/plat/${slug}`}>
             <Card id='Card'>
                 <Card.Img src={image} />
                 {isNew && ( 

@@ -33,6 +33,7 @@ const Home = () => {
                                 image={dish.image}
                                 price={dish.price}
                                 isNew={dish.isNew}
+                                slug={dish.slug}
                             />
                         </Col>
                     ))}
