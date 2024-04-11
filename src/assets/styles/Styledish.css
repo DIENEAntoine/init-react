@@ -3,3 +3,11 @@
     object-fit: cover;
 }
 
+#Card #new-badge  {
+    position: relative;
+    top: -180px;
+    right: -70%;
+    width: 20%;
+    
+}
+

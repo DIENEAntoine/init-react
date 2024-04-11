@@ -13,19 +13,22 @@ const Home = () => {
             name: "Tacos à l’unit",
             image: "https://cdn.pixabay.com/photo/2016/08/23/08/53/tacos-1613795_960_720.jpg",
             price: 3,
-            slug: "tacos-a-lunite"
+            slug: "tacos-a-lunite",
+            isNew: true,
         },
         {
             name: "Enchiladas",
             image: "https://cdn.pixabay.com/photo/2014/01/14/22/13/mexican-245240_960_720.jpg",
             price: 12,
-            slug: "enchiladas"
+            slug: "enchiladas",
+            isNew: false,
         },
         {
             name: "Mole poblano",
             image: "https://cdn.pixabay.com/photo/2021/02/04/03/57/mole-5980185_960_720.jpg",
             price: 15,
-            slug: "mole-poblano"
+            slug: "mole-poblano",
+            isNew: false,
         },
         
     ];
@@ -34,15 +37,14 @@ const Home = () => {
         <div className="home-page mt-5">
             <Container>
                 <Row className="justify-content-center">
-                    {dishes.map((dish, index) => (
+                    {dishes.map((dish, index, ) => (
                         <Col key={index}>
-                            
                                 <Dish 
                                     name={dish.name}
                                     image={dish.image}
                                     price={dish.price}
+                                    isNew={dish.isNew}
                                 />
-                            
                         </Col>
                     ))}   
                 </Row>
