@@ -5,17 +5,22 @@ import DishesData from '../datas/Dishes.json';
 import Button from 'react-bootstrap/Button';
 
 
-const DishDetail = () => {
+const DishDetail = ({ addToCart }) => {
     const { slug } = useParams();
-
     const [dish, setDish] = useState(null);
-    
+
     useEffect(() => {
-        const foundDish = DishesData.find(d => d.slug === slug);
-        
+        const foundDish = DishesData.find((d) => d.slug === slug);
         setDish(foundDish);
-        
     }, [slug]);
+
+    const handleAddToCart = () => {
+        if (dish) {
+            dish.quantity = 1;
+            addToCart(dish); 
+        }
+    };
+    
 
     return (
         <Container>
@@ -32,7 +37,7 @@ const DishDetail = () => {
                     <h1 className='mb-5'>{dish.name}</h1>
                     <p>{dish.description}</p>
                     <p>{dish.price}€</p>
-                    <Button variant="primary">Commander</Button>
+                    <Button variant="primary" onClick={handleAddToCart}>Commander</Button>
                 </Col>
             </Row>
         ) : (
